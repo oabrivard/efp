@@ -9,8 +9,10 @@ import (
 func readPositiveFloat() float64 {
 	for {
 		var line string
-		_,err := fmt.Scanln(&line)
-		if err != nil {panic(err)}
+		_, err := fmt.Scanln(&line)
+		if err != nil {
+			panic(err)
+		}
 
 		if value, err := strconv.ParseFloat(line, 64); err == nil && value >= 0 {
 			return value
@@ -27,7 +29,7 @@ func main() {
 	fmt.Print("What is the tip percentage? ")
 	tipPercent := readPositiveFloat()
 
-	tip := math.Round(tipPercent * bill) / 100
+	tip := math.Round(tipPercent*bill) / 100
 
 	fmt.Printf("The tip is %.2f\nThe total is %.2f\n", tip, bill+tip)
 }

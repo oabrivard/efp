@@ -596,12 +596,7 @@ dependencies = [
 name = "tip_calc"
 version = "0.1.0"
 dependencies = [
- "gdk",
- "gdk-pixbuf",
- "gio",
  "glib",
- "glib-sys",
- "gobject-sys",
  "gtk",
 ]
 

@@ -1,13 +1,11 @@
 extern crate glib;
-extern crate gio;
 extern crate gtk;
 
-use gio::prelude::*;
 use gtk::prelude::*;
+use glib::Value;
 
 use std::io::{stdin, stdout, Write};
 use std::env;
-use glib::Value;
 
 macro_rules! print_flush {
     ( $($t:tt)* ) => {

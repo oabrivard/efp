@@ -14,8 +14,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("tip_calc.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setTitle("Tip Calc");
+        primaryStage.setScene(new Scene(root, 265, 165));
         primaryStage.show();
     }
 

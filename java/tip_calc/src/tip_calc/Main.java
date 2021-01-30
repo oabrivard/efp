@@ -47,9 +47,10 @@ public class Main extends Application {
         System.out.print("What is the tip percentage? ");
         var tipPercent = readPositiveDouble();
 
-        var tip = Math.round(tipPercent*bill) / 100.0;
+        var tipCalculator = new TipCalculator();
+        var paymentDetails = tipCalculator.calulatePaymentDetails(bill, tipPercent);
 
-        System.out.format("The tip is %.2f%nThe total is %.2f%n", tip, bill+tip);
+        System.out.format("The tip is %.2f%nThe total is %.2f%n", paymentDetails.tip(), paymentDetails.totalAmount());
     }
 
     public static void main(String[] args) {

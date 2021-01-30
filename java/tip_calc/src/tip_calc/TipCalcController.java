@@ -9,6 +9,7 @@ import javafx.util.StringConverter;
 import java.util.Locale;
 
 public class TipCalcController {
+    private TipCalculator tipCalculator = new TipCalculator();
     @FXML private TextField BillText;
     @FXML private TextField TipText;
     @FXML private Label TipLabel;
@@ -42,10 +43,10 @@ public class TipCalcController {
                     var tipPercent = Double.parseDouble(TipText.getText());
 
                     if (tipPercent > 0.0) {
-                        var tip = Math.round(tipPercent*bill) / 100.0;
+                        var paymentDetails = tipCalculator.calulatePaymentDetails(bill, tipPercent);
 
-                        TipLabel.setText(String.format(Locale.CANADA,"The tip is %.2f",tip));
-                        TotalLabel.setText(String.format(Locale.CANADA,"The total is %.2f",bill+tip));
+                        TipLabel.setText(String.format(Locale.CANADA,"The tip is %.2f",paymentDetails.tip()));
+                        TotalLabel.setText(String.format(Locale.CANADA,"The total is %.2f",paymentDetails.totalAmount()));
 
                         return;
                     }

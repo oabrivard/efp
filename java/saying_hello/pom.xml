@@ -4,18 +4,15 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>fr.abrivard</groupId>
-  <artifactId>saying-hello</artifactId>
+  <groupId>fr.abrivard.sayinghello</groupId>
+  <artifactId>saying-hello-app</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <name>saying-hello</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.release>15</maven.compiler.release>
   </properties>
 
   <dependencies>
@@ -71,15 +68,5 @@
         </plugin>
       </plugins>
     </pluginManagement>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-          <source>15</source>
-          <target>15</target>
-        </configuration>
-      </plugin>
-    </plugins>
   </build>
 </project>
